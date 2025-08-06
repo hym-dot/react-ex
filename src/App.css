@@ -18,12 +18,10 @@ align-items: center;
 }
 
 .t-wrap h2 {
-  font-size: 13vw;
+  font-size: 80px;
   line-height: 1;
 }
 
 .t-wrap p{
   max-width: 50%;
-  /* margin: auto; */
-  /* text-align: center; */
 }
