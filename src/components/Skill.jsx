@@ -1,8 +1,18 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import './style/Skill.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const Skill = () => {
     const skills = ['html', 'css', 'javascript', 'node express', 'aws', 'sql', 'react'];
+
+    useEffect(()=>{
+            AOS.init({
+                duration:1000,
+                offset:120,
+                // once:false,
+            });
+        })
 
     return (
         <section className='Skill'>
@@ -13,7 +23,7 @@ const Skill = () => {
                 </p>
                 <ul className="skills">
                     {skills.map((skill, i) => (
-                        <li key={i}>{skill}</li>
+                        <li key={i} data-aos="fade-up">{skill}</li>
                     ))}
                 </ul>
             </div>
